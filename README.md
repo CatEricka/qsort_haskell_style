@@ -18,7 +18,7 @@ pub fn qsort<T: Ord + Clone>(list: &[T]) -> Vec<T> {
         [] => vec![],
         [x, xs @ ..] => {
             let (lesser, greater): (Vec<_>, Vec<_>) =
-                xs.to_owned().into_iter().partition(|y| *y < *x);
+                xs.to_owned().into_iter().partition(|y| y.lt(x));
             [qsort(&lesser), vec![x.to_owned()], qsort(&greater)].concat()
         }
     }
