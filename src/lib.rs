@@ -1,7 +1,3 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
-
 pub fn qsort<T: Ord + Clone>(list: &[T]) -> Vec<T> {
     match list {
         [] => vec![],
