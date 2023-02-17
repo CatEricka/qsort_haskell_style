@@ -7,6 +7,7 @@ use std::cmp::Ordering;
 /// # Example:
 ///
 /// ```
+/// use qsort_haskell_style::qsort;
 /// let result = qsort(&[1, 2, 5, 6, 789213, 99, -293, 8, 1]);
 /// assert_eq!(result, [-293, 1, 1, 2, 5, 6, 8, 99, 789213]);
 /// ```
@@ -29,6 +30,7 @@ pub fn qsort<T: Ord + Clone>(list: &[T]) -> Vec<T> {
 /// # Example:
 ///
 /// ```
+/// use qsort_haskell_style::qsort_by;
 /// let result = qsort_by(&[1, 2, 5, 6, 789213, 99, -293, 8, 1], |a, b| a.cmp(b));
 /// assert_eq!(result, [-293, 1, 1, 2, 5, 6, 8, 99, 789213]);
 /// ```
